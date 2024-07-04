@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TouchImageViewActivity"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="TouchImageView"/>
+
+    <com.ortiz.touchview.TouchImageView
+        android:id="@+id/touch_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/honda_cbr_1000rr"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/update_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        style="@style/button_style"
+        android:text="Update image"/>
+
+</LinearLayout>

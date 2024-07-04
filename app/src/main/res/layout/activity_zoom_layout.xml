@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ZoomLayoutActivity"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="ZoomLayout"/>
+
+<!--    <com.otaliastudios.zoom.ZoomLayout-->
+<!--        android:id="@+id/zoom_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:scrollbars="vertical|horizontal"-->
+<!--        app:transformation="centerInside"-->
+<!--        app:transformationGravity="auto"-->
+<!--        app:alignment="center"-->
+<!--        app:overScrollHorizontal="true"-->
+<!--        app:overScrollVertical="true"-->
+<!--        app:overPinchable="true"-->
+<!--        app:horizontalPanEnabled="true"-->
+<!--        app:verticalPanEnabled="true"-->
+<!--        app:zoomEnabled="true"-->
+<!--        app:flingEnabled="true"-->
+<!--        app:scrollEnabled="true"-->
+<!--        app:oneFingerScrollEnabled="true"-->
+<!--        app:twoFingersScrollEnabled="true"-->
+<!--        app:threeFingersScrollEnabled="true"-->
+<!--        app:minZoom="1.0"-->
+<!--        app:minZoomType="zoom"-->
+<!--        app:maxZoom="2.5"-->
+<!--        app:maxZoomType="zoom"-->
+<!--        app:animationDuration="280"-->
+<!--        app:hasClickableChildren="false"-->
+<!--        android:layout_marginBottom="4dp">-->
+
+    <com.otaliastudios.zoom.ZoomLayout
+        android:id="@+id/zoom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="4dp"
+        app:zoomEnabled="true"
+        app:overPinchable="false"
+        app:transformation="centerInside">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/hayabusa"/>
+
+    </com.otaliastudios.zoom.ZoomLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/update_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        style="@style/button_style"
+        android:text="Update image"/>
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recyclerView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="2"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>-->
+
+</LinearLayout>
